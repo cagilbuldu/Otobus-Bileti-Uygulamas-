@@ -1,0 +1,42 @@
+﻿body {
+}
+/* Dropdown menü arka plan rengi */
+.dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+/* Dropdown menü içeriği metin rengi */
+.dropdown-item {
+    color: #333;
+}
+
+    /* Dropdown menü öğeleri arasındaki kenarlık rengi */
+    .dropdown-item:hover {
+        background-color: #e9ecef;
+        color: #333;
+    }
+/* Sidebar'ı tam yüksekliğe ayarla */
+#sidebar {
+    height: 100vh; /* Sayfa yüksekliği kadar yükseklik */
+    position: sticky;
+    top: 0;
+    width: 30vh;
+    font-size: larger;
+    padding-top: 4vh;
+}
+
+/* Dropdown menüyü özelleştirme (isteğe bağlı) */
+.dropdown-menu {
+    background-color: #fff; /* Arka plan rengini beyaz yapabilirsiniz */
+    border: 1px solid #ccc; /* Kenarlık eklemek için */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge eklemek için */
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.sidebar-header {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

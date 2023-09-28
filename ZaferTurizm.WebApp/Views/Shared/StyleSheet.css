@@ -1,0 +1,32 @@
+﻿body {
+}
+/* Sidebar stilini özelleştir */
+#sidebar {
+    background-color: #007BFF; /* Ana sidebar arkaplan rengi (mavi) */
+    color: #FFF; /* Metin rengi beyaz */
+}
+
+    /* Sidebar başlık alanı */
+    #sidebar .sidebar-header {
+        background-color: #0056b3; /* Sidebar başlık arkaplan rengi (koyu mavi) */
+    }
+
+    /* Sidebar menü öğeleri */
+    #sidebar ul.components li a {
+        color: #FFF; /* Menü öğesi metin rengi beyaz */
+    }
+
+        /* Sidebar menü öğeleri üzerine gelindiğinde */
+        #sidebar ul.components li a:hover {
+            background-color: #0056b3; /* Menü öğesi üzerine gelindiğinde arkaplan rengi (koyu mavi) */
+        }
+
+    /* Sidebar alt menü öğeleri */
+    #sidebar ul.components ul li a {
+        color: #007BFF; /* Alt menü öğesi metin rengi (mavi) */
+    }
+
+        /* Sidebar alt menü öğeleri üzerine gelindiğinde */
+        #sidebar ul.components ul li a:hover {
+            background-color: #0056b3; /* Alt menü öğesi üzerine gelindiğinde arkaplan rengi (koyu mavi) */
+        }

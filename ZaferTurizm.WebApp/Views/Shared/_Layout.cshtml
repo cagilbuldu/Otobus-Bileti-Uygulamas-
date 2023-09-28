@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <title>Zafer Turizm</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-header">
+                    <h4>Taşkın Çağıl Buldu</h4>
+                </div>
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a asp-controller="Default" asp-action="Index" class="nav-link active">
+                                Anasayfa
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Marka
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" asp-controller="VehicleMake" asp-action="Index">Markaları Göster</a></li>
+                                <li><a class="dropdown-item" asp-controller="VehicleMake" asp-action="Create">Marka Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Model
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="/VehicleModel/Index">Modelleri Göster</a></li>
+                                <li><a class="dropdown-item" href="/VehicleModel/Create">Model Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Araç Tanımlama
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="/VehicleDefinition/Index">Tanımlamalar</a></li>
+                                <li><a class="dropdown-item" href="/VehicleDefinition/Create">Yeni Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Araçlar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="/VehicleModel/Index">Tüm Araçları Görüntüle</a></li>
+                                <li><a class="dropdown-item" href="/VehicleModel/Create">Yeni Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="City" asp-action="Index">
+                                Şehirler
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rota İşlemleri
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="/Route/Index">Rotaları Görüntüle</a></li>
+                                <li><a class="dropdown-item" href="/Route/Create">Rota Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sefer İşlemleri
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="/BusTrip/Index">Seferleri Görüntüle</a></li>
+                                <li><a class="dropdown-item" href="/BusTrip/Create">Sefer Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a style="margin-left:6vh; margin-top:3vh; font-weight:bolder;" class="btn btn-primary ml-auto" asp-controller="Home" asp-action="Index">Bilet Al</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+                
+            </nav>
+            
+        
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div id="content" style="padding-top:5vh;">
+                    
+
+                    @RenderBody()
+                </div>
+        
+        </main>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
